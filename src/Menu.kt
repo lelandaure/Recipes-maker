@@ -18,23 +18,33 @@ fun seleccionarMenu() {
 
         2-> {
             println("Usted ha seleccionado \"Ver mis recetas\"")
-            myRecipes()
+            viewRecipes()
         }
 
         3->{
             println("Usted ha seleccionado \"Salir\"")
             exitProcess(0)
         }
-        else
+        else->{
+            println("No ha seleccionado correctamente, adiós")
+            exitProcess(0)
+        }
     }
 }
 
-fun myRecipes() {
-    TODO("Not yet implemented")
+fun viewRecipes() {
+    println("Ver mis recetas")
 }
 
 fun makeRecipe(){
-    TODO("Not yet implemented")
+    val arreglo = arrayOf("1. Agua","2. Leche","3. Carne","4. Verduras","5. Frutas","6. Cereal","7. Huevos","8. Aceites")
+    val listaDeRecetas = {
+        for (i in arreglo){
+            println(i)
+        }
+    }
+    println("Hacer receta\nSelecciona por categoría el ingrediente que buscas")
+    listaDeRecetas()
 }
 fun imprimirMenu(){
     println("""
